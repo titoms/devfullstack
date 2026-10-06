@@ -1,6 +1,6 @@
 import { User } from '../models/User.js'
 import { Habits } from '../models/Habits.js'
-import { hashPassword } from '../utils/password.js'
+import { hashPassword } from '../Utils/password.js'
 
 export function listUsers() {
     return User.find()

@@ -4,6 +4,7 @@ import * as userController from '../controllers/userController.js'
 export const userRouter = Router()
 
 userRouter.get('/', userController.getAllUsers)
+userRouter.get('/me', userController.getMe)
 userRouter.get('/:id', userController.getOneUser)
 userRouter.post('/', userController.createUser)
 userRouter.put('/:id', userController.updateUser)

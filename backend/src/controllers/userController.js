@@ -2,6 +2,9 @@ import * as userService from '../services/userService.js'
 
 const notFound = (response) => response.status(404).json({ message: 'User introuvable' })
 
+export async function getMe(req,res){
+    response.status(200).json(await userService.getUser(req.userId))
+}
 export async function getAllUsers(_request, response) {
     const users = await userService.listUsers()
     return response.status(200).json({ message: 'Users récupérés', users })
