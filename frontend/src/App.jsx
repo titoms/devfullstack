@@ -1,10 +1,5 @@
-import Layout from './components/Layout.jsx';
-import Home from './pages/Home.jsx';
+import Auth from './pages/Auth.jsx';
 
 export default function App() {
-  return (
-    <Layout>
-      <Home />
-    </Layout>
-  );
+  return <Auth />;
 }
