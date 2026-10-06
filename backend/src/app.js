@@ -3,6 +3,8 @@ import cors from 'cors';
 import helmet from "helmet";
 import { config } from './config/env.js';
 import { taskRouter } from './routes/taskRoutes.js';
+import { userRouter } from './routes/userRoutes.js';
+import { habitsRouter } from './routes/habitsRoutes.js'
 
 const app = express();
 
@@ -20,5 +22,7 @@ app.get('/api/health', (_request, response) => {
 });
 
 app.use('/api/tasks', taskRouter);
+app.use('/api/users', userRouter);
+app.use('/api/habits', habitsRouter);
 
 export default app;
