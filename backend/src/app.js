@@ -4,8 +4,7 @@ import helmet from "helmet";
 import { config } from './config/env.js';
 import { taskRouter } from './routes/taskRoutes.js';
 import { userRouter } from './routes/userRoutes.js';
-import { habitsRouter } from './routes/habitsRoutes.js'
-import { authRouter } from './routes/authRoute.js';
+import { authRouter } from './routes/authRoutes.js';
 
 const app = express();
 
@@ -24,7 +23,6 @@ app.get('/api/health', (_request, response) => {
 
 app.use('/api/tasks', taskRouter);
 app.use('/api/users', userRouter);
-app.use('/api/habits', habitsRouter);
-app.use('/api/auth', authRouter)
+app.use('/api/auth', authRouter);
 
 export default app;
